@@ -1,0 +1,55 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 10px;
+    color: #eaeaea;
+    text-align: center;
+}
+
+/* ... other existing styles ... */
+
+/* Styles for the Create Session Form */
+form#create-session-form {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+form#create-session-form input[type="text"],
+form#create-session-form input[type="number"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #eaeaea;
+    font-size: 16px;
+}
+
+form#create-session-form label {
+    margin-bottom: 5px;
+    display: block;
+    color: #f9f9f9;
+}
+
+/* Reusing existing button styles for consistency */
+form#create-session-form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form#create-session-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

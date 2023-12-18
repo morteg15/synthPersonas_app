@@ -1,0 +1,37 @@
+<!-- landing.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('selection.static', filename='selection/style.css') }}">
+   
+</head>
+<body>
+    <h1>Welcome to the Q&A Platform</h1>
+    
+    {% if sessions %}
+    <h2>Select a Session</h2>
+    <form action="" method="get">
+        <select name="selected_session" onchange="console.log(this.value); this.form.action='/session/session/' + this.value;">
+            {% for session in sessions %}
+            <option value="{{ session }}">{{ session }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Select">
+    </form>
+    
+    
+    {% else %}
+    <p>No sessions found. Please ask a new question to start a session.</p>
+    {% endif %}
+    
+    <h2>Create a new Session</h2>
+    <a href="{{ url_for('session.create_session') }}" class="btn">Create Session</a>
+
+
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Session</title>
+    <link rel="stylesheet" href="{{ url_for('session.static', filename='session/new_session.css') }}">
+</head>
+<body>
+    
+    <h2>Ask a Question</h2>
+    <form action="{{ url_for('session.ask_question') }}" method="post">
+        <input type="hidden" name="session_name" value="{{ session_name }}">
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Ask</button>
+    </form>
+    
+</body>
+</html>
